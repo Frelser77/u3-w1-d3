@@ -22,7 +22,7 @@ class BookList extends Component {
 
 	handleChange = (event) => {
 		const searchTerm = event.target.value.toLowerCase();
-		this.setState({ searchTerm });
+		this.setState({ searchTerm: searchTerm });
 
 		if (searchTerm) {
 			const filteredBooks = this.state.allBooks.filter((book) => book.title.toLowerCase().includes(searchTerm));
@@ -41,23 +41,23 @@ class BookList extends Component {
 	};
 
 	render() {
-		const { displayedBooks } = this.state;
+		const { displayedBooks, searchTerm } = this.state;
 
 		return (
 			<Container>
-				<Form className="mb-3">
+				<Form className="mb-3" onSubmit={(event) => event.preventDefault()}>
 					<FormControl
 						id="searchBook"
 						name="searchTerm"
 						type="text"
 						placeholder="Enter book title"
-						value={this.state.searchTerm}
-						onChange={this.handleChange}
+						value={searchTerm}
+						onChange={(event) => this.handleChange(event)}
 					/>
 				</Form>
 				<Row xs={1} md={2} lg={5} className="g-4">
 					{displayedBooks.map((book) => (
-						<SingleBook key={book.asin} book={book} />
+						<SingleBook key={book.asin + book.category} book={book} />
 					))}
 				</Row>
 			</Container>

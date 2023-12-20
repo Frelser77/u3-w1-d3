@@ -49,3 +49,19 @@ a {
 .brown {
 	background-color: rgb(141, 82, 23);
 }
+
+.brownCard {
+	background-color: rgba(141, 82, 23, 0.522);
+}
+
+.card-title {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.card-price {
+	margin-top: auto;
+}

@@ -5,8 +5,12 @@ function ButtonCard() {
 	return (
 		<>
 			<div className="d-flex flex-row aling-items-center gap-5">
-				<Button variant="secondary">Add Cart</Button>
-				<Button variant="success">Show info</Button>
+				<Button size="sm" variant="secondary">
+					Add Cart
+				</Button>
+				<Button size="sm" variant="success">
+					Show info
+				</Button>
 			</div>
 		</>
 	);

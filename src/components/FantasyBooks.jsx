@@ -11,9 +11,9 @@ function BooksFantasy() {
 			<a href="#basic-nav-dropdown">
 				<h2 className="my-5 pointer">{category.toUpperCase()}</h2>
 			</a>{" "}
-			<Row xs={1} md={2} lg={3} className="g-4">
+			<Row xs={1} md={3} lg={4} xl={5} xxl={6} className="g-4">
 				{booksFantasyData.map((book, idx) => (
-					<Col key={"Fantasy" + idx}>
+					<Col key={"Fantasy" + idx} className="my-3 pointer">
 						<Card className="h-100">
 							<Card.Img
 								className=" img-fluid"
@@ -22,9 +22,11 @@ function BooksFantasy() {
 								alt={`Copertina di ${book.title}`}
 								style={{ height: "200px", objectFit: "cover" }}
 							/>
-							<Card.Body className="d-flex flex-column justify-content-between align-items-center">
-								<Card.Title>{book.title}</Card.Title>
-								<Card.Text>Prezzo: €{book.price}</Card.Text>
+							<Card.Body className="d-flex flex-column justify-content-between align-items-center brownCard">
+								<Card.Title className="card-title">{book.title}</Card.Title>
+								<Card.Text className="card-price">
+									Prezzo: <span className="badge bg-success">€{book.price}</span>
+								</Card.Text>
 								<ButtonCard />
 							</Card.Body>
 						</Card>
