@@ -22,7 +22,7 @@ function BooksFantasy() {
 								alt={`Copertina di ${book.title}`}
 								style={{ height: "200px", objectFit: "cover" }}
 							/>
-							<Card.Body className="d-flex flex-column justify-content-between align-items-center brownCard">
+							<Card.Body className="d-flex flex-column justify-content-between align-items-center brownCard rounded-bottom border-top border-black">
 								<Card.Title className="card-title">{book.title}</Card.Title>
 								<Card.Text className="card-price">
 									Prezzo: <span className="badge bg-success">€{book.price}</span>

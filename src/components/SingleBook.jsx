@@ -13,11 +13,14 @@ class SingleBook extends Component {
 	};
 	render() {
 		const { book } = this.props;
-		const cardStyle = this.state.selected ? { border: "2px solid red" } : {};
 
 		return (
 			<Col xs="auto">
-				<Card className="h-100" style={cardStyle} onClick={this.handleClick}>
+				<Card
+					className="h-100 pointer"
+					onClick={this.handleClick}
+					style={{ borderColor: this.state.selected ? "red" : " " }}
+				>
 					<Card.Img
 						className="img-fluid"
 						variant="top"
@@ -25,7 +28,7 @@ class SingleBook extends Component {
 						alt={`Copertina di ${book.title}`}
 						style={{ height: "200px", objectFit: "cover" }}
 					/>
-					<Card.Body className="brownCard">
+					<Card.Body className="brownCard rounded-bottom border-top border-black">
 						<Card.Title className="card-title">{book.title}</Card.Title>
 						<Card.Text className="card-pric">
 							Prezzo: <span className="badge bg-success">€{book.price}</span>

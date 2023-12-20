@@ -3,9 +3,8 @@ import "./App.css";
 import NavBar from "./components/navBar";
 import MyFooter from "./components/footerCom";
 import Welcome from "./components/welcome";
-import AllBooks from "./components/AllTheBook";
-
 import BookList from "./components/BookList";
+import AllBooks from "./components/AllTheBook";
 
 function App() {
 	return (

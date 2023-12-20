@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 function ButtonCard() {
 	return (
 		<>
-			<div className="d-flex flex-row aling-items-center gap-5">
+			<div className="d-flex flex-row aling-items-start gap-5">
 				<Button size="sm" variant="secondary">
 					Add Cart
 				</Button>
